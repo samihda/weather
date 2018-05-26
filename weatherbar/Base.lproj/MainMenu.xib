@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="weatherbar" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="7g6-TG-piy" customClass="StatusMenuController" customModule="weatherbar" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="5cL-qe-FDd" id="4xU-SE-ZpQ"/>
+                <outlet property="weatherView" destination="6FT-9r-keg" id="MFU-0B-oHj"/>
+            </connections>
+        </customObject>
+        <customView id="6FT-9r-keg" customClass="WeatherView" customModule="weatherbar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVX-Mz-Ycf">
+                    <rect key="frame" x="20" y="20" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="98H-kb-hHN"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2G-h4-9Gt">
+                    <rect key="frame" x="76" y="53" width="28" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="City" id="o1n-3x-HPl">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6B-Az-BjB">
+                    <rect key="frame" x="76" y="20" width="176" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Temperature and Conditions" id="r5P-1O-F9d">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <connections>
+                <outlet property="cityTextField" destination="b2G-h4-9Gt" id="idF-T1-05S"/>
+                <outlet property="currentConditionsTextField" destination="i6B-Az-BjB" id="xPy-lx-6Cs"/>
+                <outlet property="imageView" destination="FVX-Mz-Ycf" id="bxx-af-wfJ"/>
+            </connections>
+            <point key="canvasLocation" x="-18" y="-197"/>
+        </customView>
+        <menu id="5cL-qe-FDd">
+            <items>
+                <menuItem title="Update" id="1Gv-gx-Ofh">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="updateClicked:" target="7g6-TG-piy" id="5ih-xV-pQp"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="ikX-T9-YeA"/>
+                <menuItem title="Weather" id="fNR-lT-fZ0">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="vbr-Zc-9U8"/>
+                <menuItem title="Quit" id="LuO-Ta-PAp">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClickedWithSender:" target="7g6-TG-piy" id="X05-ai-RKv"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-1" y="-46"/>
+        </menu>
+    </objects>
+</document>
