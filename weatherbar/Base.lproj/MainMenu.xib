@@ -30,7 +30,7 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="98H-kb-hHN"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2G-h4-9Gt">
-                    <rect key="frame" x="76" y="53" width="28" height="17"/>
+                    <rect key="frame" x="76" y="53" width="176" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="City" id="o1n-3x-HPl">
                         <font key="font" metaFont="system"/>
@@ -53,7 +53,7 @@
                 <outlet property="currentConditionsTextField" destination="i6B-Az-BjB" id="xPy-lx-6Cs"/>
                 <outlet property="imageView" destination="FVX-Mz-Ycf" id="bxx-af-wfJ"/>
             </connections>
-            <point key="canvasLocation" x="-18" y="-197"/>
+            <point key="canvasLocation" x="-18.5" y="-197"/>
         </customView>
         <menu id="5cL-qe-FDd">
             <items>
